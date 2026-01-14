@@ -1,0 +1,156 @@
+/* ===== CERTIFICATION SECTION ===== */
+.cert-section {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  padding: 120px 80px;
+}
+
+.cert-title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+}
+
+.cert-title span {
+  color: #00fddc;
+}
+
+.cert-subtitle {
+  margin-top: -40px;
+  margin-bottom: 60px;
+  text-align: center;   /* 🔥 IMPORTANT */
+  font-size: 1rem;
+  color: #b8b8ba;
+  letter-spacing: 0.3px;
+}
+
+
+/* GRID */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+}
+
+/* CARD */
+.cert-flip-card {
+  perspective: 1200px;
+}
+
+.cert-flip-inner {
+  position: relative;
+  height: 280px;
+  border-radius: 18px;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.cert-flip-card:hover .cert-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.cert-front,
+.cert-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* FRONT */
+.cert-icon {
+  font-size: 28px;
+}
+
+.cert-front h3 {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.issuer {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.date {
+  color: #00fddc;
+  font-size: 13px;
+}
+
+/* BACK */
+.cert-back {
+  transform: rotateY(180deg);
+  text-align: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.cert-back p {
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.view-btn {
+  align-self: center;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: 1px solid #00fddc;
+  background: transparent;
+  color: #00fddc;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.view-btn:hover {
+  background: #00fddc;
+  color: #000;
+}
+
+/* MODAL */
+.cert-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.cert-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 50px rgba(0, 253, 220, 0.4);
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cert-section {
+    padding: 90px 25px;
+  }
+
+  .cert-title {
+    font-size: 36px;
+  }
+}
+
+

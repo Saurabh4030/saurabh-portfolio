@@ -1,0 +1,208 @@
+.journey-section {
+  padding: 120px 8%;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #fff;
+}
+
+/* TITLE */
+.journey-title {
+  text-align: center;
+  font-size: 3.2rem;
+  margin-bottom: 80px;
+}
+
+.journey-title span {
+  color: #00fddc;
+  /* text-shadow: 0 0 25px rgba(0, 253, 220, 0.8); */
+}
+
+/* HEADING */
+.journey-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.4rem;
+  margin-bottom: 35px;
+}
+
+.journey-heading svg {
+  color: #00fddc;
+}
+
+.journey-line {
+  width: 4px;
+  height: 28px;
+  background: #00fddc;
+  box-shadow: 0 0 15px rgba(0, 253, 220, 0.8);
+}
+
+.journey-line.purple {
+  background: #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
+}
+
+/* TIMELINE */
+.journey-timeline {
+  position: relative;
+  padding-left: 50px;
+  border-left: 2px solid rgba(0, 253, 220, 0.4);
+}
+
+.journey-dot {
+  position: absolute;
+  left: -9px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  background: #00fddc;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 253, 220, 1);
+}
+
+/* EXPERIENCE CARD */
+.journey-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.journey-date {
+  color: #00fddc;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.journey-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 253, 220, 0.18),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.journey-card:hover::before {
+  opacity: 1;
+}
+
+
+.journey-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(0, 253, 220, 0.25);
+}
+
+.journey-card ul {
+  padding-left: 18px;
+  color: #d1d5db;
+  line-height: 1.7;
+}
+
+/* DIVIDER */
+.journey-divider {
+  margin: 90px 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.25),
+    transparent
+  );
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 253, 220, 0.18),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(0, 253, 220, 0.25);
+}
+
+.project-card h4 {
+  font-size: 1.4rem;
+}
+
+.tech {
+  color: #00fddc;
+  font-size: 0.9rem;
+  margin: 6px 0 12px;
+}
+
+.desc {
+  color: #cbd5f5;
+  margin-bottom: 14px;
+}
+
+.project-card ul {
+  padding-left: 18px;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+.project-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.project-actions button {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: #00fddc;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.project-actions .outline {
+  background: transparent;
+  border: 1px solid #00fddc;
+  color: #00fddc;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .journey-title {
+    font-size: 2.4rem;
+  }
+
+  .journey-timeline {
+    padding-left: 30px;
+  }
+}

@@ -1,0 +1,121 @@
+/* ===== ADVANCED HERO SECTION ===== */
+.hero {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  min-height: 100vh;
+  padding-top: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  width: 100%;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LEFT TEXT */
+.hero-text h1 {
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.hero-text h1 span {
+  color: #00fddc;
+}
+
+.hero-text h2 {
+  margin-top: 18px;
+  font-size: 26px;
+  font-weight: 400;
+  color: #e5e7eb;
+}
+
+.hero-text p {
+  margin-top: 18px;
+  max-width: 520px;
+  color: #cbd5f5;
+  line-height: 1.7;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+  margin-top: 40px;   /* pehle 30px tha – thoda kam lag raha tha */
+  display: flex;
+  gap: 20px;
+}
+
+.btn-outline {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 1px solid #00fddc;
+  background-color: #00fddc;
+  color: #1100fd;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* IMPORTANT */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 10px rgba(0, 253, 220, 0.6),
+    0 0 22px rgba(124, 58, 237, 0.45);
+}
+
+/* RIGHT IMAGE */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.image-ring {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #00fddc, #9333ea);
+  box-shadow: 0 0 20px rgba(0, 253, 220, 0.6);
+}
+
+.image-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 0 25px;
+  }
+
+  .hero-text p {
+    margin: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .image-ring {
+    margin-top: 30px;
+  }
+}

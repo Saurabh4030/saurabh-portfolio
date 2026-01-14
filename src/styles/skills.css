@@ -1,0 +1,145 @@
+/* ===== SKILLS SECTION ===== */
+.skills-section {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  padding: 120px 80px;
+  position: relative;
+}
+
+/* HEADER */
+.skills-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 70px;
+}
+
+.skills-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.skills-header h2 span {
+  color: #00fddc;
+}
+
+.skills-header p {
+  margin-top: 14px;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.skill-card {
+  padding: 26px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow on hover */
+.skill-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 253, 220, 0.18),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(0, 253, 220, 0.25);
+}
+
+/* TOP ROW */
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-top h4 {
+  font-size: 20px;
+  color: #e5e7eb;
+}
+
+.skill-percent {
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(0, 253, 220, 0.2);
+  color: #00fddc;
+  font-weight: 500;
+}
+
+/* DESCRIPTION */
+.skill-desc {
+  margin: 14px 0 20px;
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+/* BAR */
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* PROGRESS */
+.skill-progress {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00fddc, #9333ea);
+  box-shadow: 0 0 18px rgba(0, 253, 220, 0.6);
+  animation: fillSkill 1.6s ease forwards;
+}
+
+/* Animation */
+@keyframes fillSkill {
+  from {
+    width: 0;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .skills-section {
+    padding: 100px 25px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-header h2 {
+    font-size: 36px;
+  }
+}
